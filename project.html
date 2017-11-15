@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 	<style type="text/css">
-		.btn{
+		.btn-primary{
 			background: red;
 			border: 0.5px solid #a1a1a1;
 			color: white;
@@ -12,11 +12,83 @@
 			height: 40px;
 			border-radius: 3px;
 		}
+
+		.btn-warning{
+			background: #eef442;
+			border: 0.5px solid #a1a1a1;
+			color: white;
+			font-size: 80%;
+			width: 100px;
+			height: 40px;
+			border-radius: 3px;
+		}
+
+		.disabled{
+			cursor: not-allowed;
+		}
+
+		thead{
+			background-color: red;
+		}
+
+		/* table stripped style */
+		tr:nth-child(even){
+			background-color: #f2f2f2;
+		}
+
+		tr:hover{
+			background-color: red;
+		}
+
+		table, tr, td{
+			margin: 0;
+			padding: 0;
+			border: 1px solid red;
+		}
+		table{
+			border-spacing: 0;
+		}
+
+		td{
+			border-bottom: 1pt solid #f09abc;
+			margin-bottom: 10px;
+		}
 	</style>
 </head>
 <body>
-	<button class="btn">BUTTON</button>
-	<button class="btn">BUTTON</button>
-	<button class="btn">BUTTON</button>
+	<button class="btn-primary disabled">BUTTON</button>
+
+	<button class="btn-warning">BUTTON</button>
+
+	<table>
+		<thead>
+			<th >no</th>
+			<th>nama</th>
+		</thead>
+		<tbody>
+			<tr>	
+				<td>1</td>
+				<td>Ramdan</td>
+			</tr>
+			<tr>	
+				<td>1</td>
+				<td>Ramdan</td>
+			</tr>
+			<tr>	
+				<td>1</td>
+				<td>Ramdan</td>
+			</tr>
+			<tr>	
+				<td>1</td>
+				<td>Ramdan</td>
+			</tr>
+		</tbody>
+
+	</table>
 </body>
 </html>
+
+<script type="text/javascript">
+	var styleTag = document.getElementsByTagName("style")[0].innerHTML;
+	window.alert(styleTag);
+</script>
