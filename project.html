@@ -3,6 +3,15 @@
 <head>
 	<title></title>
 	<style type="text/css">
+		/* css reset */
+		*{
+			outline: none;
+			margin: 0;
+			padding: 0;
+		}
+		/* end of css reset */
+
+		/* button class */
 		.btn-primary{
 			background: red;
 			border: 0.5px solid #a1a1a1;
@@ -26,6 +35,11 @@
 		.disabled{
 			cursor: not-allowed;
 		}
+
+		/* end of button class */
+
+
+		/* table class */
 
 		thead{
 			background-color: red;
@@ -53,12 +67,28 @@
 			border-bottom: 1pt solid #f09abc;
 			margin-bottom: 10px;
 		}
+
+		/* end of table */
+
+		#myGlower {
+		    outline: none;
+			color: #fefefe;
+			background-color: #1a8cff;
+			border-radius: 3px;
+			border: 0.5px solid #99ccff;
+			box-shadow: 0 0 3px #99ccff;
+		}
+
+		#myGlower:active {
+		    border-color: #4292f4;
+		}
 	</style>
 </head>
 <body>
 	<button class="btn-primary disabled">BUTTON</button>
 
 	<button class="btn-warning">BUTTON</button>
+	<button id="myGlower">BUTTON</button>
 
 	<table>
 		<thead>
@@ -90,5 +120,7 @@
 
 <script type="text/javascript">
 	var styleTag = document.getElementsByTagName("style")[0].innerHTML;
-	window.alert(styleTag);
+	var s = document.innerHTML;
+	var b = document.documentElement.innerHTML;
+	//window.alert(b);
 </script>
