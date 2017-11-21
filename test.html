@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+      .warning-alert{
+          display : none;
+            background-color : red;
+            z-index : 99;
+            width : 200px;
+            height : 200px;   
+            position: fixed;
+        top: 0;
+        left: 0;
+        }
+    </style>
+</head>
+<body onload="check()">
+<div id="try">
+  <h1 id="id01">My First Page</h1>
+  <p id="id02">fafdasdfasdfasdfa</p>
+</div>
+<div class="warning-alert">
+  <p>alert window</p>
+</div>
+<button id="checkButton" onclick="check()"> check </button>
+<script>
+var n = document.getElementById("try").children;
+var btnCheck = document.getElementById("checkButton");
+function check(){
+  if(n[0].id != "id01"){
+      document.getElementById("id02").innerHTML = "ada";
+  }else{
+      document.getElementById("id02").innerHTML = "tidak ada";
+      document.getElementsByClassName("warning-alert")[0].style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>

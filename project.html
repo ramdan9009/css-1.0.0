@@ -1,126 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<style type="text/css">
-		/* css reset */
-		*{
-			outline: none;
-			margin: 0;
-			padding: 0;
-		}
-		/* end of css reset */
-
-		/* button class */
-		.btn-primary{
-			background: red;
-			border: 0.5px solid #a1a1a1;
-			color: white;
-			font-size: 80%;
-			width: 100px;
-			height: 40px;
-			border-radius: 3px;
-		}
-
-		.btn-warning{
-			background: #eef442;
-			border: 0.5px solid #a1a1a1;
-			color: white;
-			font-size: 80%;
-			width: 100px;
-			height: 40px;
-			border-radius: 3px;
-		}
-
-		.disabled{
-			cursor: not-allowed;
-		}
-
-		/* end of button class */
-
-
-		/* table class */
-
-		thead{
-			background-color: red;
-		}
-
-		/* table stripped style */
-		tr:nth-child(even){
-			background-color: #f2f2f2;
-		}
-
-		tr:hover{
-			background-color: red;
-		}
-
-		table, tr, td{
-			margin: 0;
-			padding: 0;
-			border: 1px solid red;
-		}
-		table{
-			border-spacing: 0;
-		}
-
-		td{
-			border-bottom: 1pt solid #f09abc;
-			margin-bottom: 10px;
-		}
-
-		/* end of table */
-
-		#myGlower {
-		    outline: none;
-			color: #fefefe;
-			background-color: #1a8cff;
-			border-radius: 3px;
-			border: 0.5px solid #99ccff;
-			box-shadow: 0 0 3px #99ccff;
-		}
-
-		#myGlower:active {
-		    border-color: #4292f4;
-		}
-	</style>
-</head>
 <body>
-	<button class="btn-primary disabled">BUTTON</button>
+<div id="try">	
+  <h1 id="id01">My First Page</h1>
+  <p id="id02"></p>
+</div>
 
-	<button class="btn-warning">BUTTON</button>
-	<button id="myGlower">BUTTON</button>
+<script>
+var n = document.getElementById("try").childNodes;
+var txt = "";
+var i;
+for(i = 0 ; i < n.length; i++){
+	txt = txt + n[i].nodeName + "<br>";
+}
 
-	<table>
-		<thead>
-			<th >no</th>
-			<th>nama</th>
-		</thead>
-		<tbody>
-			<tr>	
-				<td>1</td>
-				<td>Ramdan</td>
-			</tr>
-			<tr>	
-				<td>1</td>
-				<td>Ramdan</td>
-			</tr>
-			<tr>	
-				<td>1</td>
-				<td>Ramdan</td>
-			</tr>
-			<tr>	
-				<td>1</td>
-				<td>Ramdan</td>
-			</tr>
-		</tbody>
+document.getElementById("id02").innerHTMl = txt;
+</script>
 
-	</table>
 </body>
 </html>
-
-<script type="text/javascript">
-	var styleTag = document.getElementsByTagName("style")[0].innerHTML;
-	var s = document.innerHTML;
-	var b = document.documentElement.innerHTML;
-	//window.alert(b);
-</script>
