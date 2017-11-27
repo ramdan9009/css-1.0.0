@@ -1,0 +1,42 @@
+.btn{
+	/*setting padding*/
+	padding:10px;
+
+	/*setting outline*/
+	outline: none;
+
+	/*setting border*/
+	border-style: solid;
+	border-color: transparent;
+	border-radius: 3px;
+}
+
+/* button background design */
+
+.magenta{
+	background-color: #3bb0ac;
+	color: #f7f7f7;
+}
+
+.yellow{
+	background-color: #e0c150;
+	color: #f7f7f7;
+}
+
+.maroon{
+	background-color:#820000;
+	color: #f7f7f7;
+}
+
+/* button active style*/
+.magenta:active{
+	border-color: #339693;
+}
+
+.maroon:active{
+	border-color: #6d0303;
+}
+
+.yellow:active{
+	border-color: #d6d375;
+}

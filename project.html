@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 <body>
-<div id="try">	
-  <h1 id="id01">My First Page</h1>
-  <p id="id02"></p>
-</div>
-
-<script>
-var n = document.getElementById("try").childNodes;
-var txt = "";
-var i;
-for(i = 0 ; i < n.length; i++){
-	txt = txt + n[i].nodeName + "<br>";
-}
-
-document.getElementById("id02").innerHTMl = txt;
-</script>
-
+	<button class="btn elevation-hover magenta">BUTTON</button>
+	<button class="btn elevation-hover maroon">BUTTON</button>
+	<button class="btn elevation-hover yellow">BUTTON</button>
 </body>
+<script type="text/javascript">
+	var btnElevationHover = document.getElementsByClassName("elevation-hover");
+	var i = btnElevationHover.length - 1;
+	for(i;i>=0;i--){
+		btnElevationHover[i].onmouseover = function(){
+			this.style.boxShadow = "3px 3px 5px 1px rgba(0,0,0,0.23)";
+			this.onclick = function(){
+				this.style.borderColor = "none"
+			}
+			this.onmouseleave = function(){
+				this.style.boxShadow = "none";
+			}
+		}
+	}
+	
+</script>
 </html>
