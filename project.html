@@ -6,9 +6,43 @@
 <body>
 	<button class="btn elevation-hover magenta">BUTTON</button>
 	<button class="btn elevation-hover maroon">BUTTON</button>
-	<button class="btn elevation-hover yellow">BUTTON</button>
+	<button class="btn yellow">BUTTON</button>
+
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>No</th>
+				<th>Nama</th>
+				<th>Alamat</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Ramdan</td>
+				<td>Lombok Timur</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Ariadi</td>
+				<td>Kecamatan Sakra</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Ramdan</td>
+				<td>Lombok Timur</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Ariadi</td>
+				<td>Kecamatan Sakra</td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 <script type="text/javascript">
+	/* button script */
 	var btnElevationHover = document.getElementsByClassName("elevation-hover");
 	var i = btnElevationHover.length - 1;
 	for(i;i>=0;i--){
@@ -21,7 +55,13 @@
 				this.style.boxShadow = "none";
 			}
 		}
-	}
+	}	
+
+	/* end of button script */
+</script>
+
+<script type="text/javascript">
 	
 </script>
+
 </html>

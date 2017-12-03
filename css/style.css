@@ -1,3 +1,13 @@
+/* css reset */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*end of css reset */
+
+/*button style */
 .btn{
 	/*setting padding*/
 	padding:10px;
@@ -40,3 +50,36 @@
 .yellow:active{
 	border-color: #d6d375;
 }
+
+
+/* table style */
+
+.table{
+	border-collapse: collapse;
+}
+
+.table tr:hover > td,tr:hover > th{
+	background-color: #c6c6c6;
+	color: #fcfcfc;
+}
+
+th, td{
+	color: #303030;
+	height: 30px;
+	border-bottom: 1px solid #d9d9db;
+	vertical-align: bottom;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	text-align: left;
+}
+
+/* stripped table style */
+.stripped tr:nth-child(even){
+	background-color: #d9dbdd;
+}
+/* end of stripped table */
+
+/* end of table style */
+
+/* list style
+/*end of list style */
