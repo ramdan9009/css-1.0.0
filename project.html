@@ -9,7 +9,7 @@
 	<button class="btn yellow">BUTTON</button>
 
 
-	<table class="table">
+	<table class="table stripped">
 		<thead>
 			<tr>
 				<th>No</th>
@@ -40,7 +40,37 @@
 			</tr>
 		</tbody>
 	</table>
+	</br>
+	<form class="form">
+		<div class="skip-grid-5">
+			<label class="form-required-info">wajib diisi</label>
+		</div>
+		<div>
+			<label class="form-label col-2">Variable</label>
+			<input type="text" name="var" class="form-input required">
+		</div>
+		<div>
+			<label class="form-label col-2">Variable</label>
+			<input type="text" name="var" class="form-input required">
+		</div>
+		<div class="skip-grid-2">
+			<button type="submit" class="btn magenta">SUBMIT</button>
+		</div>
+		
+	</form>
+
 </body>
+
+<script type="text/javascript">
+	var inputRequired = document.getElementsByClassName("required");
+	inputRequired[0].required = true;
+	var asterixNode = document.createTextNode("*");
+	var spanNode = document.createElement("span");
+	spanNode.appendChild(asterixNode);
+	spanNode.style.color = "red";
+	inputRequired[0].parentNode.appendChild(spanNode);
+</script>
+
 <script type="text/javascript">
 	/* button script */
 	var btnElevationHover = document.getElementsByClassName("elevation-hover");

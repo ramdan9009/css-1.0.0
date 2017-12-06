@@ -7,6 +7,75 @@
 
 /*end of css reset */
 
+/* grid style */
+.row{
+	width: 100%;
+}
+
+.col-1{
+	width: 8.2%;
+}
+
+.col-2{
+	width: 16.4%;
+}
+
+.col-3{
+	width: 24.6%;
+}
+
+.col-4{
+	width: 32.8%;
+}
+
+.col-5{
+	width: 41%;
+}
+
+.col-6{
+	width: 49.2%;
+}
+
+.col-7{
+	width: 57.4%;
+}
+
+.col-8{
+	width: 65.6%;
+}
+
+.col-9{
+	width: 73.8%;
+}
+
+.col-10{
+	width: 82%;
+}
+
+.col-11{
+	width: 90.2%;
+}
+
+.col-12{
+	width: 98.4%;
+}
+
+.row{
+	width: 98.4%;
+}
+
+.skip-grid-2{
+	margin-left: 16.4%;
+}
+
+.skip-grid-5{
+	margin-left: 41%;
+}
+
+/* end of grid style */
+
+
+
 /*button style */
 .btn{
 	/*setting padding*/
@@ -81,5 +150,35 @@ th, td{
 
 /* end of table style */
 
-/* list style
-/*end of list style */
+/* form style */
+
+.form{
+	width: 50%;
+}
+
+.form-required-info{
+	display: inline-block;
+	text-align: right;
+}
+
+.form-input{
+	border:1px solid #dbdde0;
+	border-radius: 3px;
+	font-size: 15px;
+	padding: 10px;
+}
+.div[text=*]{ color: red; }
+
+.form-label{
+	display: inline-block;
+	color: #303030;
+}
+
+form > button{
+	margin-left: 20px;
+}
+
+form > * {
+	margin: 5px 0 5px 0;
+}
+/* end of form */
