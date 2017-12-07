@@ -1,0 +1,9 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.col-1{
+	margin: 1px;
+	background-color: blue;
+}

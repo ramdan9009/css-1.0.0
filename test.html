@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-      .warning-alert{
-          display : none;
-            background-color : red;
-            z-index : 99;
-            width : 200px;
-            height : 200px;   
-            position: fixed;
-        top: 0;
-        left: 0;
-        }
+    <link rel="stylesheet" type="text/css" href="css/test-style.css">
+    <style type="text/css">
+      div{
+        height: 300px;
+        width: 300px;
+        float: left;
+      }
     </style>
 </head>
-<body onload="check()">
-<div id="try">
-  <h1 id="id01">My First Page</h1>
-  <p id="id02">fafdasdfasdfasdfa</p>
-</div>
-<div class="warning-alert">
-  <p>alert window</p>
-</div>
-<button id="checkButton" onclick="check()"> check </button>
+<body>
+
+  <h1 id="info"> screen size</h1>
+  <h1 id="infoScreenSize"></h1>
+  
+  <div class="col-1"></div>
+  <div class="col-1"></div>
+  <div class="col-1"></div>
+  <div class="col-1"></div>
 <script>
-var n = document.getElementById("try").children;
-var btnCheck = document.getElementById("checkButton");
-function check(){
-  if(n[0].id != "id01"){
-      document.getElementById("id02").innerHTML = "ada";
-  }else{
-      document.getElementById("id02").innerHTML = "tidak ada";
-      document.getElementsByClassName("warning-alert")[0].style.display = "block";
+  // var browserName = ["Chrome","Edge"];
+  // var info = document.getElementById("info");
+  // var deviceType = navigator.userAgent;
+  // alert(deviceType);
+  // for(var i = 0; i < browserName.length; i++){
+  //   if(deviceType.indexOf(browserName[i]) > -1){
+
+  //     alert("browser name is "+browserName[i]);
+  //     break;
+  //   }
+  // }
+
+  var body = document.getElementsByTagName("body");
+
+  body[0].onresize = function(){
+    var contentInnerWidth = window.innerWidth;
+    var info = document.getElementById("info");    
+    info.innerHTML = contentInnerWidth;
+    if(contentInnerWidth <= 1200){
+      var col = document.getElementsByClassName("col-1");  
+      for(var i = 0; i < col.length; i++){
+          col[i].style.width = "30%";
+      }  
+    }
   }
-}
+
+  
+
+  function showWindowSize(){
+    var info = document.getElementById("info");
+    var screenSize = document.getElementById("infoScreenSize");
+    info.innerHTML = window.outerWidth +" "+window.outerHeight;
+    screenSize.innerHTML = screen.width +" "+screen.height;
+  }
 </script>
 
 </body>
