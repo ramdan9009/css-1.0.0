@@ -41,22 +41,33 @@
 		</tbody>
 	</table>
 	</br>
-	<form class="form">
-		<label class="form-required-info skip-grid-5">wajib diisi</label>
-		<div>
-			<label class="form-label col-2">Variable</label>
-			<input type="text" name="var" class="form-input required">
-		</div>
-		<div>
-			<label class="form-label col-2">Variable</label>
-			<input type="text" name="var" class="form-input required">
-		</div>
-		<div class="skip-grid-2">
-			<button type="submit" class="btn magenta">SUBMIT</button>
-		</div>
-	</form>
+	<div>
+		<form class="form col-9">
+			<label class="form-required-info skip-grid-5">wajib diisi</label>
+			<div>
+				<label class="form-label col-2">Username</label>
+				<input type="text" name="var" class="form-input required col-4">
+			</div>
+			<div>
+				<label class="form-label col-2">Passowrd</label>
+				<input type="text" name="var" class="form-input required col-4">
+			</div>
+			<div>
+				<label class="form-label col-2">Passowrd</label>
+				<input type="text" name="var" class="form-input required col-4">
+			</div>
+			<div class="skip-grid-2">
+				<button type="submit" class="btn magenta">SUBMIT</button>
+			</div>
+		</form>
+	</div>
 
 </body>
+
+<script type="text/javascript">
+	var formLength = document.getElementsByClassName("form");
+	// alert(formLength[0].offsetWidth);
+</script>
 
 <script type="text/javascript">
 	var inputRequired = document.getElementsByClassName("required");

@@ -5,7 +5,8 @@
     <style type="text/css">
       div{
         height: 300px;
-        width: 300px;
+        width: 24%;
+        margin: 0.5%;
         float: left;
       }
     </style>
@@ -38,12 +39,20 @@
     var contentInnerWidth = window.innerWidth;
     var info = document.getElementById("info");    
     info.innerHTML = contentInnerWidth;
+    var col = document.getElementsByClassName("col-1"); 
+    var widthAfterResize;
+    var marginAfterResize;
     if(contentInnerWidth <= 1200){
-      var col = document.getElementsByClassName("col-1");  
-      for(var i = 0; i < col.length; i++){
-          col[i].style.width = "30%";
-      }  
+      widthAfterResize = "31%";
+      marginAfterResize = "1.16%";
+    }else if(contentInnerWidth > 1200){
+      widthAfterResize = "24%";
+      marginAfterResize = "0.5%";
     }
+    for(var i = 0; i < col.length; i++){
+      col[i].style.width = widthAfterResize;
+      col[i].style.margin = marginAfterResize;
+    }  
   }
 
   

@@ -3,7 +3,11 @@
 	padding: 0;
 }
 
-.col-1{
-	margin: 1px;
+.col-1{	
 	background-color: blue;
+	background-color: #f7f7f7;
+}
+
+.col-1:hover{
+	box-shadow: 5px 10px 10px #d9dce0;
 }
